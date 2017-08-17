@@ -7,7 +7,7 @@ public class PacMan : MonoBehaviour {
     public AudioClip chomp1;  //chomp1 =쩝쩝 먹다
     public AudioClip chomp2;
 
-    public RuntimeAnimatorController chompAnimation; //17장
+    public RuntimeAnimatorController chompAnimation; //17장  런타임중 애니메이션 교체
     public RuntimeAnimatorController deathAnimation; //17장 죽엇을 때 애니메이션
 
     public bool canMove = true; //17장 gameboard 죽었을때 false
@@ -85,9 +85,7 @@ public class PacMan : MonoBehaviour {
     }
     public void MoveToStartingPosition()  //18
     {
-     
-
-       
+           
         transform.position = startingPosition.transform.position;  //Restart호출 하면 startingPosition을 넣어줌
 
         transform.GetComponent<SpriteRenderer>().sprite = idleSprite; //다시시작하면 idle
@@ -103,7 +101,6 @@ public class PacMan : MonoBehaviour {
     {
         canMove = true;  //canMove를 true   
 
-        
         currentNode = startingPosition;  
                
         nextDirection = Vector2.left;
@@ -113,9 +110,7 @@ public class PacMan : MonoBehaviour {
         transform.GetComponent<Animator>().enabled = true;
 
         ChangePosition(direction);
-
-
-
+                
     }
 
     // Update is called once per frame
@@ -172,7 +167,6 @@ public class PacMan : MonoBehaviour {
 
     void ChangePosition (Vector2 d)
     {
-        
         if (d != direction)  //받은 d가 direction방향과 같지 않으면, 처음 0
             nextDirection = d;   //nextDirection에 d를 넣는다.
 
@@ -269,7 +263,7 @@ public class PacMan : MonoBehaviour {
         }
     }*/
 
-    void UpdateOrientation()  //PackMan 회전
+    void UpdateOrientation()  //PacMan 회전
     {
         if(direction == Vector2.left)
         {
