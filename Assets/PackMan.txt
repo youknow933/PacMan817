@@ -1,0 +1,137 @@
+spriter Renderer
+
+edit- project setting - script execution order(실행)
+기본적으로, 다른 스크립트의 Awake, OnEnable, Update 함수는 스크립트가 로딩되는 순서대로(임의의 순서로) 호출됩니다. 그러나 이 순서를 Script Execution Order 설정을 이용하여 수정하는 것이 가능합니다. (메뉴: Edit > Project Settings > Script Execution Order).
+
+
+12장 animation
+
+window - anmation
+ghost에 animator를 달음
+ghost 스크립트
+runtimeAnimatiorController
+updateAnimatorcontroller
+
+redtargettile
+
+13장 sound
+
+audio source
+loop
+Pacman(script)
+playChompSound
+consumpellet
+
+14장
+energizer pellet 먹으면 모습 변화 
+slower
+
+frighten mode
+white mode animation
+ghist 스크립트 : startfrightenedMode , UpdateAnimatiorcontroller ,changemode, MoveUpdate, ChangeMode
+
+PacMan :   ConsumePellet
+
+15장 collision detection
+
+고스트가 팩맨을 찾음
+고스트하우스 찾음
+
+- changemode, CheckCollision ,
+
+Tile - 
+ghosthouse 체크
+gameboard
+ModeUpdate
+
+16장 pacman death
+
+PacMan - Restart
+GameBoard - Restart
+Ghost - CheckCollision ,Restart
+
+17장 Death animation
+Gameboard  public void StartDeate() 17장
+
+pacman - restart
+ ghost  - Restart
+
+animation 받아옴 
+눈알만 받아옴
+
+18장 PacMan UI
+
+Sound graphic pacmantitle넣어줌
+GameMenu 
+Canvas - Scale With Screen Size 
+Ui - image
+GameMenuScript 
+GameMenu
+
+Level1 Ganvas
+
+GameBaord - StartGame
+PaMan MoveToStartPosition();
+Ghost - moveToStartingPosition
+
+19장 UI -part 2
+
+ghost sound
+gameboard
+Update()
+UpdateUI()
+pacMan
+Ghost
+
+
+20 - GameOver
+gameboard
+IEnumerator ProcessGameOver
+
+21 - winning part1
+tile의 tile 스크립트 지움
+pacman
+
+22- winning part 2
+이미지 바꿔줌 
+GameBoard
+
+23 Increasing Difficulty
+pacMan - setDifficultyForlevel
+Ghost - setDifficultyForlevel
+
+
+PacMan 스크립트
+RuntimeAnimatorController - 런타임 중 애니메이션 교체
+Object[] objects = GameObject.FindObjectsOfType(typeof(GameObject)); 
+ : GameObject의 형식의 파일을 반환함
+PlayOneShot
+ : AudioClip을 재생하며, volumeScale에 의해 AudioSource 볼륨을 스케일합니다. 
+Input.GetKeyDown(KeyCode.LeftArrow 왼쪽 방향 키 누를 때
+
+foreach???
+foreach (변수 in 연속된 데이터
+
+AudioClip 오디오 데이터를 저장하는 공간을 의미합니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
